@@ -25,7 +25,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">Skills & Paths</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -48,10 +48,7 @@ const Skills = () => {
         </motion.div>
         <div className="app__skills-exp">
           {experiences.map((experience) => (
-            <motion.div
-              className="app__skills-exp-item"
-              key={experience.year}
-            >
+            <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
@@ -68,6 +65,7 @@ const Skills = () => {
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
+                      <p className="p-text">{work.desc}</p>
                     </motion.div>
                     <Tooltip
                       id={work.name}
